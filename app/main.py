@@ -1,17 +1,5 @@
-class AliveList(list):
-    def __repr__(self) -> str:
-        formatted = []
-        for animal in self:
-            formatted.append({
-                "Name": animal.name,
-                "Health": animal.health,
-                "Hidden": animal.hidden
-            })
-        return str(formatted)
-
-
 class Animal:
-    alive: list["Animal"] = AliveList()
+    alive: list["Animal"] = []
 
     def __init__(
         self, name: str = "",
